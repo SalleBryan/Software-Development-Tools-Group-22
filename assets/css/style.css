@@ -1,0 +1,96 @@
+/**** navbar ****/
+.navbar-brand img {
+    width: 60px; /* Adjust the width of the logo */
+}
+.navbar {
+    padding: 0.5rem 1rem;
+    background-color: #fefefe; /* White background */
+}
+.navbar-nav .nav-link {
+    font-family: 'Pacifico', cursive;
+    font-size: 22px;
+}
+.nav-item {
+    padding: 0 15px;
+}
+.btn-outline-primary {
+    color: #0c93d0;
+    border-color: #0c93d0 ;
+}
+.btn-outline-primary:hover {
+    background-color: #0c93d0 ;
+    color: #fefefe;
+}
+
+/* Styling for the offcanvas menu */
+.offcanvas-end .offcanvas-header {
+    border-bottom: 1px solid #ddd;
+}
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/**** Hero ****/
+.hero-b {
+    background: #151517;
+}
+
+.textbox-w {
+    text-align: left;
+    padding: 15%;
+
+}
+
+.textbox-b {
+    text-align: left;
+    padding: 15%;
+
+}
+
+.textbox-w h1 {
+    color: #fefefe;
+    font-size: 70px;
+    font-family: 'Impact';
+}
+
+.content-1-textbox {
+    text-align: left;
+    padding: 5% 15%;   
+}
+
+.content-1-textbox h1 {
+    color: #fefefe;
+    font-size: 70px;
+    font-family: 'Impact';
+}
+
+.content-1-textbox ul {
+    margin-top: 10%;
+}
+
+.content-1-textbox li {
+    color: #fefefe;
+    font-size: 30px;
+    font-family: 'Oswald';
+}
+
+.textbox-b h1 {
+    color: #151517;
+    font-size: 70px;
+    font-family: 'Oswald';
+}
+
+.img-box {
+    margin: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-box img {
+    width: 100%;
+    height: 325px;
+    border-radius: 5px;
+}
