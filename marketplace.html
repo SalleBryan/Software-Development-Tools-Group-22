@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy-E - Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="marketplace.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">Easy-E</h1>
+            <nav>
+                <ul>
+                    <li><a href="/homepage.html">Home</a></li>
+                    <li><a href="#" class="active">Marketplace</a></li>
+                    <li><a href="#" id="cart-icon">Cart <span id="cart-count">0</span></a></li>
+                    <li class="profile-menu">
+                        <a href="#" id="profile-link">Profile</a>
+                        <div class="dropdown-menu">
+                            <a href="#" id="logout-btn">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="marketplace">
+                <h2>Marketplace</h2>
+                <div class="categories">
+                    <button class="category-btn" data-category="all">All</button>
+                    <button class="category-btn" data-category="electronics">Electronics</button>
+                    <button class="category-btn" data-category="clothing">Clothing</button>
+                    <button class="category-btn" data-category="home">Home & Garden</button>
+                    <button class="category-btn" data-category="books">Books</button>
+                    <button class="category-btn" data-category="sports">Sports & Outdoors</button>
+                    <button class="category-btn" data-category="beauty">Beauty & Personal Care</button>
+                </div>
+                <div class="products-grid" id="products-container">
+                    <!-- Products will be dynamically added here -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 ShopEase. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <div id="notification" class="notification">
+        <p id="notification-message"></p>
+    </div>
+
+    <script src="marketplace.js"></script>
+    <script src="logout.js"></script>
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+        <span id="close-cart" class="close">&times;</span>
+        <h2>Your Cart</h2>
+        <div id="cart-items" class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-total">
+            <p id="cart-total">Total: $0.00</p>
+        </div>
+        <button id="checkout-btn">Proceed to Checkout</button>
+    </div>
+</div>
+</body>
+</html>
