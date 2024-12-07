@@ -55,6 +55,10 @@ nav {
     margin-right: 1rem;
 }
 
+.nav-tabs li{
+
+}
+
 .nav-links li a {
     color: var(--text-color); /* Keep text color consistent */
     text-decoration: none;
@@ -183,6 +187,7 @@ footer {
     position: relative;
     width: 100%;
 }
+
 
 .footer-content {
     display: flex;
