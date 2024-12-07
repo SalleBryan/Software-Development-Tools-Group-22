@@ -1,11 +1,9 @@
-/* About Page Styling (about.css) */
-
-/* Ensure the About page uses the same base styles as the homepage */
+/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--background-color); /* Keep original background color */
+    color: var(--text-color); /* Keep original text color */
     transition: background-color 0.3s, color 0.3s;
     min-height: 100vh;
     display: flex;
@@ -25,7 +23,7 @@ body {
 }
 
 header {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Retaining original primary color */
     padding: 0 1rem;
     position: sticky;
     top: 0;
@@ -58,7 +56,7 @@ nav {
 }
 
 .nav-links li a {
-    color: var(--text-color);
+    color: var(--text-color); /* Keep text color consistent */
     text-decoration: none;
     padding: 0.5rem;
     font-weight: bold;
@@ -66,7 +64,7 @@ nav {
 }
 
 .nav-links li a:hover {
-    color: var(--accent-color);
+    color: var(--accent-color); /* Retaining accent color on hover */
 }
 
 .nav-icons {
@@ -144,7 +142,7 @@ nav {
 /* About Section Styling */
 #about-section {
     padding: 5rem 1rem;
-    background-color: var(--background-color);
+    background-color: var(--background-color); /* Consistent background color */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -153,7 +151,7 @@ nav {
 
 /* Adding shadow effect and smooth sliding animation */
 h2, h3, p {
-    background-color: rgba(255, 255, 255, 0.9); /* White-ish background */
+    background-color: rgba(255, 255, 255, 0.9); /* Slight white blend */
     padding: 20px;
     margin-bottom: 1.5rem;
     border-radius: 8px;
@@ -178,8 +176,8 @@ p {
 
 /* Footer styling for About page */
 footer {
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    background-color: var(--primary-color); /* Retaining primary color for footer */
+    color: var(--text-color); /* Consistent text color */
     text-align: center;
     padding: 2rem 0;
     position: relative;
@@ -219,6 +217,10 @@ footer {
     text-decoration: none;
 }
 
+.footer-section ul li a:hover {
+    color: var(--accent-color); /* Accent color on hover */
+}
+
 .social-icons {
     display: flex;
     gap: 1rem;
@@ -228,5 +230,6 @@ footer {
     text-align: center;
     margin-top: 2rem;
     padding-top: 1rem;
-    border-top: 1px solid var(--secondary-color);
+    background-color: black;
+     /* Subtle line at the footer */
 }
