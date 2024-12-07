@@ -1,0 +1,139 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #56ccf2, #2f80ed);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+/* Container for the login form */
+.login-container {
+    background-color: transparent;
+    border-radius: 12px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-container:hover {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #2f80ed;
+    outline: none;
+    background-color:transparent;
+}
+
+.input-group input::placeholder {
+    color: #bbb;
+}
+
+/* Actions (login button and forgot password link) */
+.login-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: #2f80ed;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #56ccf2;
+}
+
+.login-actions p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.login-actions a {
+    color: #2f80ed;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-actions a:hover {
+    text-decoration: underline;
+}
+
+/* Register link */
+.register-link {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+.register-link a {
+    color: #2f80ed;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
