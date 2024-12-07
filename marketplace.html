@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy-E - Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="marketplace.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="cart-modal.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1 class="logo">Easy-E</h1>
+            <nav>
+                <ul class="nav-links0">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="#" class="active">Marketplace</a></li>
+                    <li><a href="#" id="logout-btn">Logout</a></li>
+                    <li>
+                        <div>
+                            <a href="#" id="cart-icon">
+                                <i id="cartIcon" class="fas fa-shopping-cart"> Cart</i>
+                                <span id="cart-count">0</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="search-bar">
+                            <input type="text" id="search-input" placeholder="Search for products...">
+                            <button id="search-btn">Search</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Marketplace Section -->
+        <main>
+            <section class="marketplace">
+                <h2>Marketplace</h2>
+                <!-- Categories Section -->
+                <div class="categories">
+                    <button class="category-btn" data-category="all">All</button>
+                    <button class="category-btn" data-category="electronics">Electronics</button>
+                    <button class="category-btn" data-category="clothing">Clothing</button>
+                    <button class="category-btn" data-category="home">Home & Garden</button>
+                    <button class="category-btn" data-category="books">Books</button>
+                    <button class="category-btn" data-category="sports">Sports & Outdoors</button>
+                    <button class="category-btn" data-category="beauty">Beauty & Personal Care</button>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid" id="products-container">
+                    <!-- Products dynamically populated by marketplace.js -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2024 Easy-E. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Notification System -->
+    <div id="notification" class="notification">
+        <p id="notification-message"></p>
+    </div>
+
+    <!-- Cart Modal (Placed directly inside marketplace.html) -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span id="close-cart" class="close">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items dynamically added -->
+            </div>
+            <div class="cart-total">
+                <p id="cart-total">Total: $0.00</p>
+            </div>
+            <button id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="marketplace.js"></script>
+    <script src="logout.js"></script>
+    <script src="cart-modal.js"></script>
+</body>
+</html>
