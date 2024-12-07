@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function setThemeBasedOnTime() {
         const currentHour = new Date().getHours();
         if (currentHour >= 6 && currentHour < 18) {
-            body.classList.add('dark-mode');
-            themeToggle.classList.replace('lucide-moon', 'lucide-sun');
+            body.classList.add('light-mode');
+            themeToggle.classList.replace('lucide-sun', 'lucide-moon');
         } else {
             body.classList.remove('light-mode');
-            themeToggle.classList.replace('lucide-sun', 'lucide-moon');
+            themeToggle.classList.replace('lucide-moon', 'lucide-sun');
         }
     }
 
