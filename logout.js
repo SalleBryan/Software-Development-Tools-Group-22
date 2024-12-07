@@ -1,22 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     const logoutBtn = document.getElementById('logout-btn');
-    const notification = document.getElementById('notification');
-    const notificationMessage = document.getElementById('notification-message');
+    
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default link behavior
+            
+            // Perform your logout logic here, e.g., clearing cookies or localStorage
+            console.log('Logging out...'); // Replace with your actual logout logic
 
-    logoutBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        showNotification('You have been logged out successfully.');
-        setTimeout(() => {
-            window.location.href = 'index.html';
-        }, 2000);
-    });
+            // Example: If you're using localStorage/sessionStorage for login state:
+            localStorage.removeItem('user');
+            sessionStorage.removeItem('user');
 
-    function showNotification(message) {
-        notificationMessage.textContent = message;
-        notification.style.display = 'block';
-        setTimeout(() => {
-            notification.style.display = 'none';
-        }, 3000);
+            // Redirect user to homepage after logout (or any other page)
+            window.location.href = 'login.html'; // Modify this as needed
+        });
     }
 });
-
