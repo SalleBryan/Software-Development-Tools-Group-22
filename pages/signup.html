@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easy-E - Login</title>
+    <title>Easy-E - Signup</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="dark-theme">
     <div class="login-container">
         <div class="login-box">
-            <h2>Login</h2>
-            <form id="login-form" action="/index.html" method="POST" onsubmit="return validateLogin(event)">
+            <h2>Sign Up</h2>
+            <form id="signup-form" action="signup.php" method="POST">
+                <!-- Name Field -->
+                <div class="input-container">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
                 <!-- Email Field -->
                 <div class="input-container">
                     <label for="email">Email</label>
@@ -20,34 +26,39 @@
                 </div>
 
                 <!-- Password Field -->
-                <!-- Password Field with Show Password Checkbox -->
                 <div class="input-container">
-                   <label for="password">Password</label>
-                   <input type="password" id="password" name="password" placeholder="Enter your password" required>
-    
-                     <!-- Checkbox for Showing Password -->
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                    <!-- Checkbox for Showing Password -->
                     <div class="checkbox-container">
                         <input type="checkbox" id="show-password" onclick="togglePasswordVisibility()"> 
                         <label for="show-password">Make password visible</label>
                     </div>
                 </div>
 
-
-                <!-- Login Button -->
+                <!-- Sign Up Button -->
                 <div class="btn-container">
-                    <button type="submit" class="btn login-btn">Login</button>
+                    <button type="submit" class="btn signup-btn">Sign Up</button>
                 </div>
 
                 <!-- Google Login Button -->
                 <div class="btn-container">
                     <button type="button" class="btn google-btn">
-                        <i class="fab fa-google"></i> Login with Google
+                        <i class="fab fa-google"></i> Sign Up with Google
                     </button>
                 </div>
 
-                <!-- Signup Link -->
+                <!-- Apple Login Button -->
+                <div class="btn-container">
+                    <button type="button" class="btn apple-btn">
+                        <i class="fab fa-apple"></i> Sign Up with Apple
+                    </button>
+                </div>
+
+                <!-- Already have an account link -->
                 <div class="signup-link">
-                    <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+                    <p>Already have an account? <a href="login.html">Login here</a></p>
                 </div>
             </form>
         </div>
@@ -64,30 +75,6 @@
             } else {
                 passwordField.type = "password"; // Hide password
             }
-        }
-
-        // Basic Validation for Login Form
-        function validateLogin(event) {
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-
-            // Check for valid email format
-            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            if (!emailPattern.test(email)) {
-                alert("Please enter a valid email address.");
-                event.preventDefault(); // Prevent form submission if invalid
-                return false;
-            }
-
-            // Check for non-empty password
-            if (password === "") {
-                alert("Password cannot be empty.");
-                event.preventDefault(); // Prevent form submission if password is empty
-                return false;
-            }
-
-            // If valid, allow form submission (redirect to homepage)
-            return true;
         }
     </script>
 </body>
