@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+// Check if a user is logged in
+$isLoggedIn = isset($_SESSION['user_id']);
+$userName = $isLoggedIn ? $_SESSION['user_name'] : null; // Assume 'user_name' is stored in the session
+$userEmail = $isLoggedIn ? $_SESSION['user_email'] : null; // Assume 'user_email' is stored in the session
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +17,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
 </head>
 <body>
     <header>
@@ -21,11 +28,24 @@
                 <li><a href="pages/index.html">Marketplace</a></li>
                 <li><a href="pages/about.html">About</a></li>
                 <li><a href="pages/contact.html">Contact</a></li>
-                <li><a href="#" id="logout-btn">Logout</a></li>
             </ul>
-            <div class="nav-icons"> 
-                <i id="searchIcon" class="fas fa-search"></i> 
-                <i id="themeToggle" class="fas fa-sun"></i> 
+            <div class="nav-icons">
+                <i id="searchIcon" class="fas fa-search"></i>
+                <i id="themeToggle" class="fas fa-sun"></i>
+                <?php if ($isLoggedIn): ?>
+                    <!-- User Icon with Dropdown -->
+                    <div class="dropdown">
+                        <i id="userIcon" class="fas fa-user-circle" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                        <div class="dropdown-menu dropdown-menu-end p-3 shadow-sm">
+                            <p><strong><?php echo htmlspecialchars($userName); ?></strong></p>
+                            <p class="text-muted small"><?php echo htmlspecialchars($userEmail); ?></p>
+                            <a href="logout.php" class="btn btn-sm btn-danger">Logout</a>
+                        </div>
+                    </div>
+                <?php else: ?>
+                    <!-- Login Button -->
+                    <a href="pages/login.html" id="login-btn" class="btn btn-primary">Login</a>
+                <?php endif; ?>
             </div>
         </nav>
         <div id="searchBar" class="search-bar">
@@ -38,7 +58,11 @@
                 <li><a href="#categories">Categories</a></li>
                 <li><a href="/about.html">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#" id="logout-btn">Logout</a></li>
+                <?php if ($isLoggedIn): ?>
+                    <li><a href="pages/login.html" id="logout-btn">Logout</a></li>
+                <?php else: ?>
+                    <li><a href="pages/login.html" id="login-btn">Login</a></li>
+                <?php endif; ?>
             </ul>
         </div>
     </header>
@@ -149,7 +173,11 @@
                     <li><a href="#categories">Categories</a></li>
                     <li><a href="/about.html">About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <lis><a href="#" id="logout-btn">Logout</a></lis>
+                    <?php if ($isLoggedIn): ?>
+                        <li><a href="pages/login.html" id="logout-btn">Logout</a></li>
+                    <?php else: ?>
+                        <li><a href="pages/login.html" id="login-btn">Login</a></li>
+                    <?php endif; ?>
                 </ul>
             </div>
             <div class="footer-section">
@@ -173,7 +201,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="homepage.js"></script>
-    <script src="logout.js"></script>
 </body>
 </html>
-

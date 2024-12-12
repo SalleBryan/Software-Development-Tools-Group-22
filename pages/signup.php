@@ -1,14 +1,13 @@
 <?php
 // Database connection
-$host = "sql8.freesqldatabase.com";
-$dbname = "sql8751506"; // Update with your database name
-$username = "sql8751506"; // Update with your database username
-$password = "cMNI2GZdDH"; // Update with your database password
-$port = 3306; // Default MySQL port, update if specified
+$host = "localhost";
+$dbname = "easy_e"; // Update with your database name
+$username = "root"; // Update with your database username
+$password = ""; // Update with your database password
 
 try {
     // Establish the database connection
-    $conn = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password);
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die("Connection failed: " . $e->getMessage());
@@ -31,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':password', $hashedPassword);
 
         if ($stmt->execute()) {
-            header("Location: ../index.html");
+            header("Location: ../index.php");
             exit();
         } else {
             echo "<script>
