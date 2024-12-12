@@ -37,7 +37,7 @@ module.exports = async (req, res) => {
     await connection.end();
 
     // Redirect to the external index.html on success
-    res.writeHead(302, { Location: "../a/index.html" });
+    res.writeHead(302, { Location: "../index.html" });
     res.end();
   } catch (error) {
     // Handle specific errors
