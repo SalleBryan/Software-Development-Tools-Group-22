@@ -31,10 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':password', $hashedPassword);
 
         if ($stmt->execute()) {
-            echo "<script>
-                alert('Signup successful! Redirecting to homepage.');
-                window.location.href = 'homepage.html';
-                </script>";
+            header("Location: ../index.html");
+            exit();
         } else {
             echo "<script>
                 alert('Signup failed. Please try again.');
