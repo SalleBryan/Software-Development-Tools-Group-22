@@ -14,6 +14,7 @@ try {
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
     $email = $_POST["email"];
     $password = $_POST["password"];
 
@@ -22,7 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Insert user data into the database
     try {
-        $stmt = $conn->prepare("INSERT INTO users (email, password) VALUES (:email, :password)");
+        $stmt = $conn->prepare("INSERT INTO users (name, email, password) VALUES (:name, :email, :password)");
+        $stmt->bindParam(':name', $name);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':password', $hashedPassword);
 
