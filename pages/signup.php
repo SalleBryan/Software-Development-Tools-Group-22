@@ -7,9 +7,9 @@ $password = "cMNI2GZdDH"; // Update with your database password
 $port = 3306; // Default MySQL port, update if specified
 
 try {
+    // Establish the database connection
     $conn = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connection successful!";
 } catch (PDOException $e) {
     die("Connection failed: " . $e->getMessage());
 }
@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    // Hash the password
+    // Hash the password for security
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     // Insert user data into the database
