@@ -24,20 +24,7 @@
             <div class="nav-icons">
                 <i id="searchIcon" class="fas fa-search"></i>
                 <i id="themeToggle" class="fas fa-sun"></i>
-                <!--<?php if ($isLoggedIn): ?>
-                    <!-- User Icon with Dropdown
-                    <div class="dropdown">
-                        <i id="userIcon" class="fas fa-user-circle" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                        <div class="dropdown-menu dropdown-menu-end p-3 shadow-sm">
-                            <p><strong><?php echo htmlspecialchars($userName); ?></strong></p>
-                            <p class="text-muted small"><?php echo htmlspecialchars($userEmail); ?></p>
-                            <a href="logout.php" class="btn btn-sm btn-danger">Logout</a>
-                        </div>
-                    </div>
-                <?php else: ?>
-                    <!-- Login Button
-                    <a href="pages/login.html" id="login-btn" class="btn btn-primary">Login</a>
-                <?php endif; ?>-->
+                <a href="pages/login.html" id="login-btn" class="btn btn-primary">Login</a>
             </div>
         </nav>
         <div id="searchBar" class="search-bar">
@@ -50,57 +37,47 @@
                 <li><a href="#categories">Categories</a></li>
                 <li><a href="/about.html">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <!--<?php if ($isLoggedIn): ?>
-                    <li><a href="pages/login.html" id="logout-btn">Logout</a></li>
-                <?php else: ?>
-                    <li><a href="pages/login.html" id="login-btn">Login</a></li>
-                <?php endif; ?>-->
+                <li><a href="pages/login.html" id="login-btn">Login</a></li>
             </ul>
         </div>
     </header>
     <section>
         <div id="easyECarousel" class="carousel slide" data-bs-ride="carousel">
-            <!-- Indicators -->
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#easyECarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#easyECarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#easyECarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#easyECarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#easyECarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#easyECarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-          
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="d-block w-100" alt="Slide 1">
-                <div class="carousel-caption d-flex align-items-center justify-content-center">
-                  <h1>Welcome to Easy-E</h1>
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="d-block w-100" alt="Slide 1">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <h1>Welcome to Easy-E</h1>
+                    </div>
                 </div>
-              </div>
-              <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="d-block w-100" alt="Slide 2">
-                <div class="carousel-caption d-flex align-items-center justify-content-center">
-                  <h1>Welcome to Easy-E</h1>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="d-block w-100" alt="Slide 2">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <h1>Welcome to Easy-E</h1>
+                    </div>
                 </div>
-              </div>
-              <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="d-block w-100" alt="Slide 3">
-                <div class="carousel-caption d-flex align-items-center justify-content-center">
-                  <h1>Welcome to Easy-E</h1>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="d-block w-100" alt="Slide 3">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <h1>Welcome to Easy-E</h1>
+                    </div>
                 </div>
-              </div>
             </div>
-          
-            <!-- Controls -->
             <button class="carousel-control-prev" type="button" data-bs-target="#easyECarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#easyECarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
             </button>
-          
-            <!-- Progress Bar -->
             <div class="carousel-progress">
-              <div class="progress-bar"></div>
+                <div class="progress-bar"></div>
             </div>
         </div>
     </section>
@@ -126,7 +103,6 @@
                 </div>
             </div>
         </section>
-
         <section id="split-section">
             <div class="container-fluid">
                 <div class="row g-0">
@@ -143,15 +119,13 @@
                 </div>
             </div>
         </section>
-
         <section id="featured-products" class="p-5">
-            <h2>FEAUTRED PRODUCTS</h2>
+            <h2>FEATURED PRODUCTS</h2>
             <div class="product-grid">
                 <!-- Product items will be dynamically added here -->
             </div>
         </section>
     </div>
-
     <footer>
         <div class="footer-content">
             <div class="footer-section">
@@ -165,11 +139,7 @@
                     <li><a href="#categories">Categories</a></li>
                     <li><a href="/about.html">About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <?php if ($isLoggedIn): ?>
-                        <li><a href="pages/login.html" id="logout-btn">Logout</a></li>
-                    <?php else: ?>
-                        <li><a href="pages/login.html" id="login-btn">Login</a></li>
-                    <?php endif; ?>
+                    <li><a href="pages/login.html" id="login-btn">Login</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -190,7 +160,6 @@
             <p>&copy; 2024 Easy-E. All rights reserved.</p>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="homepage.js"></script>
 </body>
