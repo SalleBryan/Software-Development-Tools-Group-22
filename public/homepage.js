@@ -13,9 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             productItem.className = 'product-item';
             productItem.innerHTML = `
               <h3>${product.name}</h3>
-              <p>${product.description}</p>
-              <p>Price: $${product.price}</p>
-              <img src="${product.image}" alt="${product.name}" />
+              <img src="${product.image_url}" alt="${product.name}" />
             `;
             productList.appendChild(productItem);
           });
