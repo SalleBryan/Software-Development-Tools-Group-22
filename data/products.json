@@ -1,0 +1,39 @@
+[
+    {
+      "id": "1",
+      "name": "T-Shirt",
+      "category": "Clothing",
+      "description": "A stylish and comfortable t-shirt.",
+      "price": 5000,
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      "stock": 20
+    },
+    {
+      "id": "2",
+      "name": "Jeans",
+      "category": "Clothing",
+      "description": "Durable and comfortable jeans.",
+      "price": 15000,
+      "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      "stock": 10
+    },
+    {
+      "id": "3",
+      "name": "Dress",
+      "category": "Clothing",
+      "description": "Elegant and chic dress for special occasions.",
+      "price": 25000,
+      "image": "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      "stock": 15
+    },
+    {
+      "id": "4",
+      "name": "Accessories",
+      "category": "Accessories",
+      "description": "Trendy accessories to complete your look.",
+      "price": 3000,
+      "image": "https://images.unsplash.com/photo-1556306535-0f09a537f0a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      "stock": 30
+    }
+  ]
+  
