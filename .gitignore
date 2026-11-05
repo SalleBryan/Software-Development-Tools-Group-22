@@ -1,0 +1,10 @@
+
+
+# Local secrets and generated dependencies.
+node_modules/
+**/node_modules/
+.env
+.env.*
+!.env.example
+.claude/settings.local.json
+**/dist/
