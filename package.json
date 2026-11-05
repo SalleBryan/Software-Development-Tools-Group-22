@@ -14,7 +14,7 @@
     "react-dom": "^18.3.1",
     "web-vitals": "^4.2.4",
     "bcrypt": "^6.0.0",
-    "body-parser": "^1.20.3",
+    "body-parser": "^2.4.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
