@@ -3,6 +3,15 @@ const bodyParser = require("body-parser");
 const mysql = require("mysql2");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
+
+const JWT_SECRET = process.env.JWT_SECRET;
+if (!JWT_SECRET || Buffer.byteLength(JWT_SECRET, "utf8") < 32) {
+    throw new Error("Set JWT_SECRET to a fresh random secret of at least 32 bytes.");
+}
+if (!process.env.DB_PASSWORD) {
+    throw new Error("Set DB_PASSWORD using a new database credential.");
+}
 
 const app = express();
 const port = 3000;
@@ -14,10 +23,10 @@ app.use(express.static("public")); // Serve static files (HTML, CSS, JS)
 
 // MySQL Connection
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "5q93pj7m",
-    database: "easy_e",
+    host: process.env.DB_HOST || "localhost",
+    user: process.env.DB_USER || "easy_e_app",
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME || "easy_e",
 });
 
 db.connect((err) => {
@@ -27,9 +36,6 @@ db.connect((err) => {
     }
     console.log("Connected to MySQL database.");
 });
-
-// JWT Secret
-const JWT_SECRET = "5q93pj7m";
 
 // Signup API
 app.post("/api/signup", async (req, res) => {
@@ -99,7 +105,7 @@ app.post("/api/login", (req, res) => {
         const token = jwt.sign({ id: user.id, email: user.email }, JWT_SECRET, { expiresIn: "1h" });
 
         // Redirect to index page after successful login
-        res.status(200).cookie("token", token, { httpOnly: true }).redirect("/");
+        res.status(200).cookie("token", token, { httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: "lax", maxAge: 3600000 }).redirect("/");
     });
 });
 
@@ -112,7 +118,7 @@ const authenticate = (req, res, next) => {
     }
 
     try {
-        const decoded = jwt.verify(token.split(" ")[1], JWT_SECRET);
+        const decoded = jwt.verify(token.split(" ")[1], JWT_SECRET, { algorithms: ["HS256"] });
         req.user = decoded;
         next();
     } catch (err) {
